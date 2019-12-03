@@ -1,2 +1,125 @@
 @import url('https://fonts.googleapis.com/css?family=Ubuntu:400,700&display=swap');
-@import '_var.scss'
+@import '_reset.scss';
+@import '_var.scss';
+@import 'typography.scss';
+
+body {
+    overflow: hidden;
+    background-color: $weather-background;
+    .status {
+        position: absolute;
+        top:50%;
+        left:50%;
+        transform: translate(-50%, -50%);
+        -webkit-transform: translate(-50%, -50%); 
+        color: $weather-text-color;
+    }
+    .weather-wrapper {
+        width:100vw;
+        height: 100vh;
+        .current-weather {
+            width:100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            .current-weather-inner {
+                flex: 1 1 auto;
+                padding: 50px;
+                color: $weather-text-color;
+                max-width: 550px;
+                .bigger, .big {
+                    text-shadow: $dark-shadow, $light-shadow;
+                }
+                .small {
+                  text-shadow: $dark-shadow;
+                }               
+                a {
+                  color: $weather-text-color;
+                  text-decoration: none;
+                }
+            }
+        }
+        .weather-forecast {
+            transform: translateX(-100%);
+            -webkit-transform: translateX(-100%);
+            position: fixed;
+            top: 0;
+            left:40px;
+            right:40px;
+            bottom: 0;
+            width: 100%;
+            background-color: $drawer-background;
+            color: $drawer-text;
+            transition: transform .475s cubic-bezier(0.4, 0.0, 0.2, 1);
+            -webkit-transition: transform .475s cubic-bezier(0.4, 0.0, 0.2, 1);
+            box-shadow: 0 10px 10px 5px rgba(0,0,0,.25);
+            &.open {
+              transform: translateX(-40px);
+              -webkit-transform: translateX(-40px);         
+            }
+            .medium {
+                padding: 60px 20px;
+                @media only screen and (max-width: 767px) {
+                    padding: 20px;
+                }
+            }
+            .weather-forecast-inner {
+                margin-right: 40px;
+                display: grid;
+                grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+                @media only screen and (max-width: 767px) {
+                    grid-template-columns: repeat(auto-fill, minmax(80px, 1fr));
+                }
+                .weather-forecast-item {
+                    padding: 20px;
+                    display: flex;
+                    @media only screen and (max-width: 767px) {
+                        font: $font-small
+                    }
+                    @media only screen and (max-width: 767px) {
+                      display: block;
+                      padding: 5px 20px;
+                    }
+                    flex: 1 1 auto;
+                    i {
+                        font-size: 24px;
+                        padding: 10px 10px 0 0;
+                        @media only screen and (max-width: 767px) {
+                            font-size: 18px;
+                        }
+                    }
+                    .description {
+                        @media only screen and (max-width: 767px) {
+                          display: none;
+                        }                     
+                    }
+                }
+            }
+            .handle {
+                position:absolute;
+                right:0;
+                top: 0;
+                bottom: 0;
+                width:40px;            
+                cursor:pointer;
+                &>div {
+                    position: absolute;
+                    top:50%;
+                    left:50%;
+                    transform: translate(-50%, -50%);
+                    -webkit-transform: translate(-50%, -50%); 
+                    display: flex;
+                    justify-content: space-between;
+                    width: 20px;
+                    span {
+                      display: block;
+                      width: 3px;
+                      height: 20px;
+                      box-shadow: inset 1px 1px 1px rgba(0, 0, 0, 0.25)
+                    }                 
+                }
+            }
+        }
+    }
+}

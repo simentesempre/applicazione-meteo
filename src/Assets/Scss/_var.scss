@@ -2,14 +2,13 @@ $weather-background: #18558c;
 $weather-text-color:#517daa;
 $drawer-background: #e4e4e4;
 $drawer-text: #898989;
-
-$font-family: 'Ubuntu', sans-serif;
 $line-height: 1.5em;
-$font-size-regular: 14px/$line-height;
-$font-size-small: 11px/$line-height;
-$font-size-medium: 18px/$line-height;
-$font-size-big: 24px/$line-height;
-$font-size-bigger: 36px/$line-height;
+$font-family: 'Ubuntu', sans-serif;
+$font-size-regular: #{"17px/#{$line-height}"};
+$font-size-small: #{"13px/#{$line-height}"};
+$font-size-medium: #{"24px/#{$line-height}"};
+$font-size-big: #{"36px/#{$line-height}"};
+$font-size-bigger: #{"72px/#{$line-height}"};
 
 $font-weight-regular: 400;
 $font-weight-bold: 700;
@@ -21,4 +20,7 @@ $font-small-bold: normal normal $font-weight-bold $font-size-small $font-family;
 $font-medium: normal normal $font-weight-regular $font-size-medium $font-family;
 $font-big: normal normal $font-weight-regular $font-size-big $font-family;
 $font-big-bold: normal normal $font-weight-bold $font-size-big $font-family;
-$font-biger: normal normal $font-weight-bold $font-size-bigger $font-family;
+$font-bigger: normal normal $font-weight-bold $font-size-bigger $font-family;
+
+$dark-shadow: -1px -1px 1px rgba(0,0,0,.25);
+$light-shadow: 1px 1px 1px rgba(255,255,255,.35);
