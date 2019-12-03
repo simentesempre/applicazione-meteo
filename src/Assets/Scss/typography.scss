@@ -1,0 +1,24 @@
+body {
+    font: $font-regular;
+}
+.strong {
+    font: $font-regular-bold; 
+}
+.bigger {
+    font: $font-bigger;
+}
+.big {
+    font: $font-big;
+    .strong {
+        font: $font-big-bold; 
+    }
+}
+.medium {
+    font: $font-medium;
+}
+.small {
+    font: $font-small;
+    .strong {
+        font: $font-small-bold; 
+    }
+}
