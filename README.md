@@ -2,7 +2,7 @@ This project was bootstrapped with [Create React App](https://github.com/faceboo
 
 ## Install
 
-### `git clone #`
+### `git clone https://github.com/simentesempre/applicazione-meteo.git`
 
 Clones the repo inside an "applicazione-meteo" folder
 
